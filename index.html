@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+</html>
+<script>
+    function showWindowHref() {
+      var href = "http://www.runoob.com/jquery/misc-trim.html?channelid=12333&name=xiaoming&age=23";
+      if (/\?/.test(href)) {
+        var url = href.substring(href.indexOf("?")+1)
+        var urlArr = url.split("&")
+        var Obj = {};
+        for (var i = 0; i < urlArr.length; i++) {
+          var urlObj = urlArr[i].split("=");
+          Obj[urlObj[0]] = urlObj[1]
+        }
+      }
+      return Obj;
+    }
+    showWindowHref()
+   
+    console.log(showWindowHref())
+    
+<script>
